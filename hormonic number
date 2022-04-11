@@ -1,0 +1,27 @@
+Write a program that takes a command-line argument n and prints the nth harmonic number. Harmonic Number is of the form
+
+
+// Function to find N-th Harmonic Number
+double nthHarmonic(int N)
+{
+    // H1 = 1
+    float harmonic = 1.00;
+ 
+    // loop to apply the formula
+    // Hn = H1 + H2 + H3 ... + Hn
+    for (int i = 2; i <= N; i++) {
+        harmonic += (float)1 / i;
+    }
+ 
+    return harmonic;
+}
+ 
+// Driver Code
+int main()
+{
+    int N = 8;
+     
+    cout<<nthHarmonic(N);
+     
+    return 0;
+}
