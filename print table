@@ -1,0 +1,11 @@
+1  Write a program that takes a command-line argument n and prints a table of the powers of 2 that are less than or equal to 2^n.
+
+#!/bin/bash
+ n='^[0-9]+$' 
+for i in "$@"; do 
+if [[ $i =~ $n ]]; then
+ if [[ $((i & (i-1))) == 0 ]];then
+ echo " $i is a power of 2 "
+fi
+ fi
+ Done
